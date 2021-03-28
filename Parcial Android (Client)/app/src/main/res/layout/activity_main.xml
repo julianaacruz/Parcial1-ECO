@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEE5E8"
+    android:focusable="auto"
+    android:foregroundTint="#CFCFCF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"
+        android:text="Nuevo Recordatorio"
+        android:textColor="#333A41"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/importancia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/importancia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="Importancia"
+        android:textColor="#333A41"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <TextView
+        android:id="@+id/posicionTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Posición en el mural"
+        android:textColor="#333A41"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/importancia"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVerde" />
+
+    <TextView
+        android:id="@+id/posicionTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Recordatorio"
+        android:textColor="#333A41"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/importancia"
+        app:layout_constraintTop_toBottomOf="@+id/posX" />
+
+    <Button
+        android:id="@+id/buttonVerde"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3DCF7A"
+        android:text="BAJA"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/importancia"
+        app:layout_constraintTop_toBottomOf="@+id/importancia"
+        tools:text="BAJA" />
+
+    <Button
+        android:id="@+id/buttonAmarillo"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#F2D74F"
+        android:text="MEDIA"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#4CAF50"
+        app:layout_constraintStart_toEndOf="@+id/buttonVerde"
+        app:layout_constraintTop_toTopOf="@+id/buttonVerde" />
+
+    <Button
+        android:id="@+id/buttonRojo"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#F26539"
+        android:text="ALTA"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#4CAF50"
+        app:layout_constraintStart_toEndOf="@+id/buttonAmarillo"
+        app:layout_constraintTop_toTopOf="@+id/buttonVerde" />
+
+    <EditText
+        android:id="@+id/posX"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edittextback"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColorHint="#66333A41"
+        app:layout_constraintStart_toStartOf="@+id/posicionTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/posicionTitulo" />
+
+    <EditText
+        android:id="@+id/recordatorioText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/edittextback"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="Texto del recordatorio"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:textColorHint="#66333A41"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/posY"
+        app:layout_constraintStart_toStartOf="@+id/posicionTitulo2"
+        app:layout_constraintTop_toBottomOf="@+id/posicionTitulo2" />
+
+    <EditText
+        android:id="@+id/posY"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/edittextback"
+        android:ems="10"
+        android:hint="Y"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColorHint="#66333A41"
+        app:layout_constraintStart_toEndOf="@+id/posX"
+        app:layout_constraintTop_toTopOf="@+id/posX" />
+
+    <Button
+        android:id="@+id/vistaButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#737D88"
+        android:text="Vista"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/recordatorioText"
+        app:layout_constraintTop_toBottomOf="@+id/recordatorioText" />
+
+    <Button
+        android:id="@+id/confirmarButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#333A41"
+        android:text="Confirmar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/recordatorioText"
+        app:layout_constraintStart_toEndOf="@+id/vistaButton"
+        app:layout_constraintTop_toTopOf="@+id/vistaButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
